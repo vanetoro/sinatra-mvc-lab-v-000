@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text.downcase
     text = text.split()
     binding.pry
-    if @text == 'I'
+    if @text == 'i'
       'Iway'
     else
       text.map do |word|
