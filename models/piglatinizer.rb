@@ -3,20 +3,18 @@ class PigLatinizer
 
   def piglatinize(text)
     @text = text.downcase
+    vowel ='aeiou'
     text = text.split()
-
       text.map do |word|
-        if word.length < 1
-          binding.pry
+        if word.length == 1
+            "#{word}way"
+        elsif vowel.include? word[0].downcase
+            "#{word}way"
         else
-          split = word.split(/([aeiou])/,2)
-          if split[0].empty?
-            "#{split[2]}#{split[1].downcase}way"
-
-            else
+            split = word.split(/([aeiou])/,2)
             "#{split[1]}#{split[2]}#{split[0].downcase}ay"
-          end.join
         end
-      end
+    end.join(' ')
    end
+
 end
