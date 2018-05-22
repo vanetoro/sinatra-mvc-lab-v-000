@@ -8,7 +8,7 @@ class PigLatinizer
       'Iway'
     else
       text.map do |word|
-        split = word.split(//,2)
+        split = word.split(/[aeiou]/,2)
         "#{split[1]}#{split[0].downcase}ay"
        end.join
      end
