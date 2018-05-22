@@ -1,7 +1,7 @@
 class PigLatinizer
     attr_reader :text
 
-  def intialize(text)
+  def piglatinize(text)
     @text = text.downcase
     text = text.split()
     text.map do |word|
