@@ -4,6 +4,7 @@ class PigLatinizer
   def piglatinize(text)
     @text = text.downcase
     text = text.split()
+    binding.pry
     if @text == 'I'
       'Iway'
     else
