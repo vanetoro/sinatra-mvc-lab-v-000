@@ -15,7 +15,7 @@ class PigLatinizer
 
             else
             "#{split[1]}#{split[2]}#{split[0].downcase}ay"
-          end.flatten
+          end.join
         end
       end
    end
