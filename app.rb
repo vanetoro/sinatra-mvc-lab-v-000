@@ -6,7 +6,7 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-  POST '/user_input' do
-
-  end
+  # POST '/user_input' do
+  #   params[:text]
+  # end
 end
