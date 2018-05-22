@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text.downcase
   end
 
-  def to_pig_latin
+  def piglatinize
     text = text.split()
     text.map do |word|
       split = word.split(//,2)
