@@ -9,8 +9,7 @@ class App < Sinatra::Base
   end
 
   post '/piglatinizer' do
-    binding.pry
-    @text = Piglatinizer.new(params[:name])
+   @text = Piglatinizer.new(params[:name])
     erb :piglatinize
   end
 end
