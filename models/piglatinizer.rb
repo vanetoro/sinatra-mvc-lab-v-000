@@ -12,7 +12,7 @@ class PigLatinizer
             "#{word}way"
         else
             split = word.split(/([aeiou])/,2)
-            "#{split[1]}#{split[2]}#{split[0].downcase}ay"
+            "#{split[1]}#{split[2]}#{split[0]}ay"
         end
     end.join(' ')
    end
