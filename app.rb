@@ -6,7 +6,8 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-  # POST '/user_input' do
-  #   params[:text]
-  # end
+  POST '/user_input' do
+    @text = params[:name]
+    @text.Piglatinizer.to_pig_latin
+  end
 end
