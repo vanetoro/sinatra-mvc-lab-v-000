@@ -7,9 +7,14 @@ class PigLatinizer
     if @text == 'i'
       'Iway'
     else
+      vowels = 'aeiou'
       text.map do |word|
         split = word.split(/([aeiou])/,2)
-        "#{split[1]}#{split[2]}#{split[0].downcase}ay"
+        if vowels.include? lig[-1]
+            "#{split[1]}#{split[2]}#{split[0].downcase}way"
+          else
+              "#{split[1]}#{split[2]}#{split[0].downcase}ay"
+            end
        end.join
      end
    end
