@@ -8,7 +8,6 @@ class App < Sinatra::Base
 
   POST '/user_input' do
     @text = Piglatinizer.new(params[:name])
-
     @text.to_pig_latin
   end
 end
